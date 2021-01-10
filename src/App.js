@@ -1,13 +1,13 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Cards from "./components/Cards";
-import Sidebar from "./components/Sidebar";
+// import Sidebar from "./components/Sidebar";
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <Sidebar />
+      {/* <Sidebar /> */}
       <Cards />
     </div>
   );
