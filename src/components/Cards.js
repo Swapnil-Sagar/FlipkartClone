@@ -15,11 +15,12 @@ export class Cards extends Component {
   render() {
     return (
       <div>
-        <div class="sidenav">
-          <h1>Filters</h1>
-          <h3>Select Gender</h3>
+        <div className="sidenav">
+          <h1 style={{ fontSize: "large" }}>Filters</h1>
+          <h3 style={{ fontSize: "medium" }}>Select Gender</h3>
 
           <button
+            className="Genderbtn"
             onClick={() =>
               this.setState({ CardStateM: true, CardStateF: false })
             }
@@ -27,21 +28,15 @@ export class Cards extends Component {
             Men
           </button>
           <button
+            className="Genderbtn"
             onClick={() =>
               this.setState({ CardStateF: true, CardStateM: false })
             }
           >
             Women
           </button>
-          <button
-            onClick={() =>
-              this.setState({ CardStateF: false, CardStateM: false })
-            }
-          >
-            Show All
-          </button>
 
-          <h3>Select Size</h3>
+          <h3 style={{ fontSize: "medium" }}>Select Size</h3>
           <input
             type="radio"
             id="s"
@@ -69,7 +64,7 @@ export class Cards extends Component {
               })
             }
           />
-          <label for="female">Meduim</label>
+          <label for="female">Medium</label>
           <input
             type="radio"
             id="l"
@@ -84,18 +79,40 @@ export class Cards extends Component {
             }
           />
           <label for="other">Large</label>
+          <button
+            className="clearbtn"
+            onClick={() =>
+              this.setState({
+                CardStateF: false,
+                CardStateM: false,
+                CardStateSm: false,
+                CardStateMe: false,
+                CardStateLg: false,
+              })
+            }
+          >
+            Clear Filter
+          </button>
           <a target="_blank" href="https://swapnilsagar.netlify.app/">
-            <h4>Made By Swapnil Sagar</h4>
+            <h4
+              style={{
+                color: "#037CD5",
+                fontFamily: "cursive",
+                fontSize: "medium",
+              }}
+            >
+              Made By Swapnil Sagar
+            </h4>
           </a>
         </div>
 
         <div style={{ marginLeft: "300px" }}>
-          <div class="row">
-            <div class="column">
+          <div className="row">
+            <div className="column">
               {!this.state.CardStateM &&
                 !this.state.CardStateMe &&
                 !this.state.CardStateLg && (
-                  <div class="card" id="1">
+                  <div className="card" id="1">
                     <img
                       src="https://sslimages.shoppersstop.com/B8AC9759D45547D9AEF177F0DE13B7C8/img/980CEDB365AE4213B2319BD6F006B76A/203884747_9212_980CEDB365AE4213B2319BD6F006B76A.jpg"
                       alt="Avatar"
@@ -114,11 +131,11 @@ export class Cards extends Component {
                 )}
             </div>
 
-            <div class="column">
+            <div className="column">
               {!this.state.CardStateM &&
                 !this.state.CardStateSm &&
                 !this.state.CardStateLg && (
-                  <div class="card" id="2">
+                  <div className="card" id="2">
                     <img
                       src="https://i.pinimg.com/originals/78/08/28/780828c93aefa010c0abd23cca5051e5.png"
                       alt="Avatar"
@@ -137,17 +154,17 @@ export class Cards extends Component {
                 )}
             </div>
 
-            <div class="column">
+            <div className="column">
               {!this.state.CardStateF &&
                 !this.state.CardStateSm &&
                 !this.state.CardStateMe && (
-                  <div class="card" id="3">
+                  <div className="card" id="3">
                     <img
                       src="https://hrxbrand.com/public/img/4NWzLUo.png"
                       alt="Avatar"
                       style={{ width: "100%", height: "300px" }}
                     />
-                    <div class="container">
+                    <div className="container">
                       <h4>
                         <b>HRX</b>
                       </h4>
@@ -164,17 +181,17 @@ export class Cards extends Component {
                 )}
             </div>
 
-            <div class="column">
+            <div className="column">
               {!this.state.CardStateF &&
                 !this.state.CardStateSm &&
                 !this.state.CardStateLg && (
-                  <div class="card" id="4">
+                  <div className="card" id="4">
                     <img
                       src="https://wi-images.condecdn.net/image/dY9OKLRLpXZ/crop/2040/f/wired-nike.jpg"
                       alt="Avatar"
                       style={{ width: "100%", height: "300px" }}
                     />
-                    <div class="container">
+                    <div className="container">
                       <h4>
                         <b>Nike</b>
                       </h4>
@@ -191,12 +208,12 @@ export class Cards extends Component {
                 )}
             </div>
           </div>
-          <div class="row">
-            <div class="column">
+          <div className="row">
+            <div className="column">
               {!this.state.CardStateF &&
                 !this.state.CardStateMe &&
                 !this.state.CardStateLg && (
-                  <div class="card" id="5">
+                  <div className="card" id="5">
                     <img
                       src="https://static.nike.com/a/images/f_auto/dpr_2.0/h_500,c_limit/2170a0e7-0185-468b-9a27-bba0cbea908e/nike-just-do-it.jpg"
                       alt="Avatar"
@@ -219,17 +236,17 @@ export class Cards extends Component {
                 )}
             </div>
 
-            <div class="column">
+            <div className="column">
               {!this.state.CardStateF &&
                 !this.state.CardStateSm &&
                 !this.state.CardStateMe && (
-                  <div class="card" id="6">
+                  <div className="card" id="6">
                     <img
                       src="https://images-na.ssl-images-amazon.com/images/I/81R0vFcZR6L._UY550_.jpg"
                       alt="Avatar"
                       style={{ width: "100%", height: "300px" }}
                     />
-                    <div class="container">
+                    <div className="container">
                       <h4>
                         <b>Adidas</b>
                       </h4>
@@ -246,11 +263,11 @@ export class Cards extends Component {
                 )}
             </div>
 
-            <div class="column">
+            <div className="column">
               {!this.state.CardStateM &&
                 !this.state.CardStateSm &&
                 !this.state.CardStateLg && (
-                  <div class="card" id="7">
+                  <div className="card" id="7">
                     <img
                       src="https://5.imimg.com/data5/QC/IW/EB/IOS-36216371/product-jpeg-500x500.png"
                       alt="Avatar"
@@ -269,11 +286,11 @@ export class Cards extends Component {
                 )}
             </div>
 
-            <div class="column">
+            <div className="column">
               {!this.state.CardStateF &&
                 !this.state.CardStateSm &&
                 !this.state.CardStateLg && (
-                  <div class="card" id="8">
+                  <div className="card" id="8">
                     <img
                       src="https://m.media-amazon.com/images/I/81S0PqaM8tL._AC_UL1500_.jpg"
                       alt="Avatar"

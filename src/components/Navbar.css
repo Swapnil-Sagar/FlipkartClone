@@ -5,7 +5,7 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: rgb(62, 74, 236);
+  background-color: #037cd5;
 }
 
 .topnav a {
@@ -29,17 +29,38 @@ body {
   padding: 4px 6px;
   text-decoration: none;
   height: 50px;
-  width: 50px;
+  width: 120px;
+  margin-left: 250px;
 }
 
 .NavSearch {
   float: left;
   color: #f2f2f2;
-  text-align: center;
+  text-align: left;
   padding: 4px 6px;
   text-decoration: none;
   height: 20px;
+  width: 400px;
   margin-top: 10px;
+}
+
+.searchicon {
+  margin-top: 11px;
+  height: 30px;
+  width: 40px;
+}
+
+.loginbtn {
+  height: 30px;
+  width: 100px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(68, 68, 68);
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 100px;
+  margin-top: -10 !important;
+  border-color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 .topnav a.active {

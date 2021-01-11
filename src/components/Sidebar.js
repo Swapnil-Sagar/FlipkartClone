@@ -5,7 +5,7 @@ class Sidebar extends Component {
   render() {
     return (
       <div class="sidenav">
-        <h1>Filters</h1>
+        <p style={{ fontSize: "large" }}>Filters</p>
         <h3>Select Gender</h3>
 
         <button onClick={() => this.setState({ CardState: true })}>Men</button>
