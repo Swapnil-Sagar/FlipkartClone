@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./Cards.css";
 
+
+// Item cards
 export class Cards extends Component {
   constructor(props) {
     super(props);
